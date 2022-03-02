@@ -50,6 +50,7 @@
         ],
         "no-shadow": "off",
         "no-use-before-define": "off",
+        "react/destructuring-assignment": "off",
         "react/function-component-definition": ["error",
             {
                 "namedComponents": "arrow-function" ,
@@ -64,6 +65,7 @@
             }
         ],
         "react/prop-types": "off",
+        "react/require-default-props": "off",
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "@typescript-eslint/explicit-function-return-type": [
