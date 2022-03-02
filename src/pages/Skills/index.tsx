@@ -1,7 +1,10 @@
+import Heading from 'components/Heading';
 import * as React from 'react';
 
 const SkillsPage = (): JSX.Element => (
-    <div>Skills</div>
+    <main>
+        <Heading level={1} content="Skills" />
+    </main>
 );
 
 export default SkillsPage;

@@ -1,15 +1,77 @@
 body {
-    font-size: 16;
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    div#root {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+    }
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 2rem 0 4rem 0;
+
+    nav {
+        width: 60%;
+
+        ul {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+    
+            li {
+                width: 100%;
+                height: 40px;
+                border-bottom: solid 2px black;
+    
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    text-decoration: none;
+                    color: black;
+                    font-size: 1.75rem;
+                    border-bottom: solid 5px rgba($color: #ff0000, $alpha: 0);
+                    transition: 0.75s all;
+    
+                    &.active {
+                        color: red;
+                        border-bottom: solid 5px rgba($color: #ff0000, $alpha: 1.0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -42,6 +104,6 @@ h5 {
     font-size: 1.125rem;
 }
 
-h6, p, span {
+h6, p, span, li {
     font-size: 1rem;
 }
