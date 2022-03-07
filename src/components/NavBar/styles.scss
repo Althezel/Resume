@@ -16,6 +16,8 @@ nav {
             border-bottom: solid 2px #2d2d2d;
 
             a {
+                position: relative;
+                top: -1px;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
