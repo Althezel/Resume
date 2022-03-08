@@ -43,7 +43,7 @@ const EducationArticle = (): JSX.Element => (
 );
 
 const AboutPage = (): JSX.Element => (
-    <main>
+    <>
         <Heading level={1} content="About Me" />
         <section>
             <hr />
@@ -51,7 +51,7 @@ const AboutPage = (): JSX.Element => (
             <hr />
             <EducationArticle />
         </section>
-    </main>
+    </>
 );
 
 export default AboutPage;
