@@ -33,11 +33,23 @@ const ContactInfoArticle = (): JSX.Element => (
     </article>
 );
 
+const EducationArticle = (): JSX.Element => (
+    <article>
+        <Heading level={2} content="Education" />
+        <Heading level={4} content="Virginia Polytechnic Institute and State University" />
+        <Heading level={5} content="B.S. Mining and Minerals Engineering" />
+        <p>AUGUST 2011 - MAY 2015, BLACKSBURG, VA</p>
+    </article>
+);
+
 const AboutPage = (): JSX.Element => (
     <main>
+        <Heading level={1} content="About Me" />
         <section>
-            <Heading level={1} content="About" />
+            <hr />
             <ContactInfoArticle />
+            <hr />
+            <EducationArticle />
         </section>
     </main>
 );
