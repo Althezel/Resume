@@ -10,7 +10,7 @@ const ContactInfoArticle = (): JSX.Element => (
             <strong>Name: </strong>
             Logan A. Whompton
         </p>
-        <p className="link_container">
+        <p>
             <strong>Github:</strong>
             <a
                 href="https://www.github.com/Althezel"
@@ -20,7 +20,7 @@ const ContactInfoArticle = (): JSX.Element => (
                 www.github.com/Althezel
             </a>
         </p>
-        <p className="link_container">
+        <p>
             <strong>LinkedIn:</strong>
             <a
                 href="https://www.linkedin.com/in/logan-whompton"
@@ -45,8 +45,8 @@ const EducationArticle = (): JSX.Element => (
 const AboutPage = (): JSX.Element => (
     <>
         <Heading level={1} content="About Me" />
-        <section>
-            <hr />
+        <hr />
+        <section className="about">
             <ContactInfoArticle />
             <hr />
             <EducationArticle />

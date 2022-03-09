@@ -16,6 +16,7 @@ describe('<NavBar />', () => {
         );
         expect(screen.getByText('About Me')).toBeInTheDocument();
         expect(screen.getByText('Experience')).toBeInTheDocument();
+        expect(screen.getByText('Projects')).toBeInTheDocument();
         expect(screen.getByText('Skills')).toBeInTheDocument();
     });
 
@@ -27,6 +28,7 @@ describe('<NavBar />', () => {
         );
         expect(screen.getByText('About Me')).toHaveClass('active');
         expect(screen.getByText('Experience')).not.toHaveClass('active');
+        expect(screen.getByText('Projects')).not.toHaveClass('active');
         expect(screen.getByText('Skills')).not.toHaveClass('active');
     });
 
@@ -38,16 +40,25 @@ describe('<NavBar />', () => {
         );
         expect(screen.getByText('About Me')).toHaveClass('active');
         expect(screen.getByText('Experience')).not.toHaveClass('active');
+        expect(screen.getByText('Projects')).not.toHaveClass('active');
         expect(screen.getByText('Skills')).not.toHaveClass('active');
 
         userEvent.click(screen.getByText('Experience'));
         expect(screen.getByText('Experience')).toHaveClass('active');
         expect(screen.getByText('About Me')).not.toHaveClass('active');
+        expect(screen.getByText('Projects')).not.toHaveClass('active');
         expect(screen.getByText('Skills')).not.toHaveClass('active');
+
+        userEvent.click(screen.getByText('Projects'));
+        expect(screen.getByText('Projects')).toHaveClass('active');
+        expect(screen.getByText('Experience')).not.toHaveClass('active');
+        expect(screen.getByText('Skills')).not.toHaveClass('active');
+        expect(screen.getByText('About Me')).not.toHaveClass('active');
 
         userEvent.click(screen.getByText('Skills'));
         expect(screen.getByText('Skills')).toHaveClass('active');
         expect(screen.getByText('Experience')).not.toHaveClass('active');
+        expect(screen.getByText('Projects')).not.toHaveClass('active');
         expect(screen.getByText('About Me')).not.toHaveClass('active');
     });
 });

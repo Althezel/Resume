@@ -11,6 +11,7 @@ import ExperiencePage from 'pages/Experience';
 import SkillsPage from 'pages/Skills';
 import Header from 'components/Header/header';
 import ErrorBoundaryFallback from 'components/ErrorBoundaryFallback';
+import ProjectsPage from 'pages/Projects';
 
 const App = (): JSX.Element => (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -27,6 +28,7 @@ const App = (): JSX.Element => (
             >
                 <Route path="/" element={<AboutPage />} />
                 <Route path="experience" element={<ExperiencePage />} />
+                <Route path="projects" element={<ProjectsPage />} />
                 <Route path="skills" element={<SkillsPage />} />
             </Route>
         </Routes>

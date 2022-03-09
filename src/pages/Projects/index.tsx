@@ -1,14 +1,14 @@
 import * as React from 'react';
 import Heading from 'components/Heading';
 import ExperienceArticle from 'components/ExperienceArticle';
-import ExperienceData from 'data/experience';
+import ProjectData from 'data/projects';
 
-const ExperiencePage = (): JSX.Element => (
+const ProjectsPage = (): JSX.Element => (
     <>
-        <Heading level={1} content="Experience" />
+        <Heading level={1} content="Projects" />
         <hr />
-        <section className="experience">
-            {ExperienceData.map((experience) => (
+        <section className="projects">
+            {ProjectData.map((experience) => (
                 <ExperienceArticle
                     key={`${experience.position} - ${experience.entity}`}
                     content={experience}
@@ -18,4 +18,4 @@ const ExperiencePage = (): JSX.Element => (
     </>
 );
 
-export default ExperiencePage;
+export default ProjectsPage;

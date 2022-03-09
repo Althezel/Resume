@@ -24,6 +24,14 @@ const NavBar = (): JSX.Element => (
             </li>
             <li>
                 <NavLink
+                    to="/projects"
+                    className={({ isActive }) => (isActive ? 'active' : undefined)}
+                >
+                    Projects
+                </NavLink>
+            </li>
+            <li>
+                <NavLink
                     to="/skills"
                     className={({ isActive }) => (isActive ? 'active' : undefined)}
                 >
