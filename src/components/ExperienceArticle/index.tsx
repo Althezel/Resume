@@ -1,8 +1,12 @@
 import * as React from 'react';
 import Heading from 'components/Heading';
 import { ExperienceArticleProps } from 'types';
+import styled from 'styled-components';
 
-import './styles.scss';
+const StyledUl = styled.ul`
+    margin-block: 0;
+    padding: 0 0 0 4rem;
+`;
 
 const ExperienceArticle = (props: ExperienceArticleProps):JSX.Element => (
     <article className="experience">
@@ -12,13 +16,13 @@ const ExperienceArticle = (props: ExperienceArticleProps):JSX.Element => (
                 <em>{date}</em>
             </p>
         ))}
-        <ul>
+        <StyledUl>
             {props.content.talkingPoints.map((point) => (
                 <li key={point}>
                     {point}
                 </li>
             ))}
-        </ul>
+        </StyledUl>
     </article>
 );
 

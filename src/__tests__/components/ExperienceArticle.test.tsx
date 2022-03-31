@@ -36,9 +36,4 @@ describe('<ExperienceArticle />', () => {
         expect(screen.getByText('test point 1')).toBeInTheDocument();
         expect(screen.getByText('test point 2')).toBeInTheDocument();
     });
-
-    test('has proper className', () => {
-        render(<ExperienceArticle content={TestExperience} />);
-        expect(document.querySelector('article')).toHaveClass('experience');
-    });
 });

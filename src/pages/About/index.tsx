@@ -1,10 +1,21 @@
 import * as React from 'react';
 import Heading from 'components/Heading';
+import styled from 'styled-components';
+import { StyledSection, StyledHr } from 'styles';
 
-import './styles.scss';
+const StyledAboutArticle = styled.article`
+    & > *:not(h2) {
+        padding: 0 0 0 2rem;
+    }  
+`;
+
+const StyledAnchor = styled.a`
+    margin: 0 0 0 0.25rem;
+    color: blue;  
+`;
 
 const ContactInfoArticle = (): JSX.Element => (
-    <article>
+    <StyledAboutArticle>
         <Heading level={2} content="Contact Information" />
         <p>
             <strong>Name: </strong>
@@ -12,45 +23,45 @@ const ContactInfoArticle = (): JSX.Element => (
         </p>
         <p>
             <strong>Github:</strong>
-            <a
+            <StyledAnchor
                 href="https://www.github.com/Althezel"
                 rel="noreferrer noopener"
                 target="_blank"
             >
                 www.github.com/Althezel
-            </a>
+            </StyledAnchor>
         </p>
         <p>
             <strong>LinkedIn:</strong>
-            <a
+            <StyledAnchor
                 href="https://www.linkedin.com/in/logan-whompton"
                 rel="noreferrer noopener"
                 target="_blank"
             >
                 www.linkedin.com/in/logan-whompton
-            </a>
+            </StyledAnchor>
         </p>
-    </article>
+    </StyledAboutArticle>
 );
 
 const EducationArticle = (): JSX.Element => (
-    <article>
+    <StyledAboutArticle>
         <Heading level={2} content="Education" />
         <Heading level={4} content="Virginia Polytechnic Institute and State University" />
         <Heading level={5} content="B.S. Mining and Minerals Engineering" />
         <p>AUGUST 2011 - MAY 2015, BLACKSBURG, VA</p>
-    </article>
+    </StyledAboutArticle>
 );
 
 const AboutPage = (): JSX.Element => (
     <>
         <Heading level={1} content="About Me" />
-        <hr />
-        <section className="about">
+        <StyledHr />
+        <StyledSection>
             <ContactInfoArticle />
-            <hr />
+            <StyledHr />
             <EducationArticle />
-        </section>
+        </StyledSection>
     </>
 );
 

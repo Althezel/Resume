@@ -12,21 +12,6 @@ const TestSkill: Skill = {
 };
 
 describe('<Skillbar />', () => {
-    test('has proper className', () => {
-        render(<Skillbar content={TestSkill} />);
-        expect(document.querySelector('div')?.children[0]).toHaveClass('skill');
-    });
-
-    test('fill bar container has proper classname', () => {
-        render(<Skillbar content={TestSkill} />);
-        expect(document.querySelector('div')?.children[0].children[1]).toHaveClass('skill__bar');
-    });
-
-    test('the fill bar has proper className', () => {
-        render(<Skillbar content={TestSkill} />);
-        expect(document.querySelector('.skill__bar')?.children[0]).toHaveClass('skill__bar__5');
-    });
-
     test('proper text is displayed', () => {
         render(<Skillbar content={TestSkill} />);
         expect(screen.getByText('Test Skill')).toBeInTheDocument();
